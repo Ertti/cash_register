@@ -24,14 +24,14 @@ def Augļi_page():
         img = img.resize((new_width, new_height), Image.LANCZOS)
         return ImageTk.PhotoImage(img)
 
-    kon1 = resize_image('āboli.png', 0.19, 0.12)
-    kon2 = resize_image('banāni.png', 0.19, 0.12)
-    kon3 = resize_image('bumbier.png', 0.19, 0.12)
-    kon4 = resize_image('Tplūmes.png', 0.19, 0.12)
-    kon5 = resize_image('Ķirši.png', 0.19, 0.12)
-    kon6 = resize_image('Apelsīn.png', 0.19, 0.12)
-    kon7 = resize_image('Zemenes.png', 0.19, 0.12)
-    kon8 = resize_image('Mellenes.png', 0.19, 0.12)
+    k1 = resize_image('Augļu produkti/āboli.png', 0.19, 0.12)
+    k2 = resize_image('Augļu produkti/banāni.png', 0.19, 0.12)
+    k3 = resize_image('Augļu produkti/bumbier.png', 0.19, 0.12)
+    k4 = resize_image('Augļu produkti/Tplūmes.png', 0.19, 0.12)
+    k5 = resize_image('Augļu produkti/Ķirši.png', 0.19, 0.12)
+    k6 = resize_image('Augļu produkti/Apelsīn.png', 0.19, 0.12)
+    k7 = resize_image('Augļu produkti/Zemenes.png', 0.19, 0.12)
+    k8 = resize_image('Augļu produkti/Mellenes.png', 0.19, 0.12)
 
     # frame for cart
     cart_frame = tk.Frame(logs, relief=tk.RIDGE, bg='#dadada')
@@ -41,31 +41,31 @@ def Augļi_page():
 
     # PRODUKTS 1
 
-    k1 = tk.Label(logs, image=kon1)
-    k1.place(relx=0.02, rely=0.01)
-    āboli = kon1
+    image_label = tk.Label(logs, image=k1)
+    image_label.place(relx=0.02, rely=0.01)
+    āboli = k1
 
-    cena_āboli = 0.90
+    cena_āboli = 0.25
     cena_text_āboli = tk.Label(text=f"Cena: €{cena_āboli:.2f}", font=("Arial", 12))
     cena_text_āboli.place(relx=0.135, rely=0.141)
     daudzums_āboli = tk.Label(text="0", font=("Arial", 12))
     daudzums_āboli.place(relx=0.068, rely=0.14)
     āboli = ProductController(daudzums_āboli, cart_manager, "Āboli", cena_āboli)
 
-    plus_vz = tk.Button(text="+", width=3, command=lambda: āboli.update_amount(1))
-    plus_vz.place(relx=0.09, rely=0.14)
-    minus_vz = tk.Button(text="-", width=3, command=lambda: āboli.update_amount(-1))
-    minus_vz.place(relx=0.04, rely=0.14)
+    plus_āboli = tk.Button(text="+", width=3, command=lambda: āboli.update_amount(1))
+    plus_āboli.place(relx=0.09, rely=0.14)
+    minus_āboli = tk.Button(text="-", width=3, command=lambda: āboli.update_amount(-1))
+    minus_āboli.place(relx=0.04, rely=0.14)
 
     # PRODUKTS 2
 
-    k2 = tk.Label(logs, image=kon2)
-    k2.place(relx=0.23, rely=0.01)
-    bana = kon2
+    image_label = tk.Label(logs, image=k2)
+    image_label.place(relx=0.23, rely=0.01)
+    bana = k2
 
-    cena_bana = 0.25
-    cena_bana = tk.Label(text=f"Cena: €{cena_bana:.2f}", font=("Arial", 12))
-    cena_bana.place(relx=0.345, rely=0.141)
+    cena_bana = 1.19
+    cena_text_bana = tk.Label(text=f"Cena: €{cena_bana:.2f}", font=("Arial", 12))
+    cena_text_bana.place(relx=0.345, rely=0.141)
     daudzums_bana = tk.Label(text="0", font=("Arial", 12))
     daudzums_bana.place(relx=0.268, rely=0.14)
     bana = ProductController(daudzums_bana, cart_manager, "Banāni", cena_bana)
@@ -77,11 +77,11 @@ def Augļi_page():
 
     # PRODUKTS 3
 
-    k3 = tk.Label(logs, image=kon3)
-    k3.place(relx=0.44, rely=0.01)
-    bumb = kon3
+    image_label = tk.Label(logs, image=k3)
+    image_label.place(relx=0.44, rely=0.01)
+    bumb = k3
 
-    cena_bumb = 0.70
+    cena_bumb = 0.55
     cena_text_bumb = tk.Label(text=f"Cena: €{cena_bumb:.2f}", font=("Arial", 12))
     cena_text_bumb.place(relx=0.555, rely=0.141)
     daudzums_bumb = tk.Label(text="0", font=("Arial", 12))
@@ -95,11 +95,11 @@ def Augļi_page():
 
     #PRODUKTS 4
 
-    k4 = tk.Label(logs, image=kon4)
-    k4.place(relx=0.02, rely=0.20)
-    Tplūm = kon4
+    image_label = tk.Label(logs, image=k4)
+    image_label.place(relx=0.02, rely=0.20)
+    Tplūm = k4
 
-    cena_Tplūm = 0.10
+    cena_Tplūm = 1.50
     cena_text_Tplūm = tk.Label(text=f"Cena: €{cena_Tplūm:.2f}", font=("Arial", 12))
     cena_text_Tplūm.place(relx=0.135, rely=0.33)
     daudzums_Tplūm = tk.Label(text="0", font=("Arial", 12))
@@ -113,9 +113,9 @@ def Augļi_page():
     
     #PRODUKTS 5
 
-    k5 = tk.Label(logs, image=kon5)
-    k5.place(relx=0.23, rely=0.20)
-    Ķirš = kon5
+    image_label = tk.Label(logs, image=k5)
+    image_label.place(relx=0.23, rely=0.20)
+    Ķirš = k5
 
     cena_Ķirš = 0.75
     cena_text_Ķirš = tk.Label(text=f"Cena: €{cena_Ķirš:.2f}", font=("Arial", 12))
@@ -131,16 +131,16 @@ def Augļi_page():
 
     #PRODUKTS 6
 
-    k6 = tk.Label(logs, image=kon6)
-    k6.place(relx=0.44, rely=0.20)
-    Apel = kon6
+    image_label = tk.Label(logs, image=k6)
+    image_label.place(relx=0.44, rely=0.20)
+    Apel = k6
 
-    cena_Apel = 0.10
+    cena_Apel = 1.60
     cena_text_Apel = tk.Label(text=f"Cena: €{cena_Apel:.2f}", font=("Arial", 12))
     cena_text_Apel.place(relx=0.555, rely=0.33)
     daudzums_Apel = tk.Label(text="0", font=("Arial", 12))
     daudzums_Apel.place(relx=0.477, rely=0.329)
-    Apel = ProductController(daudzums_Apel, cart_manager, "Apelšini", cena_Apel)
+    Apel = ProductController(daudzums_Apel, cart_manager, "Apelsīni", cena_Apel)
 
     plus_Apel = tk.Button(text="+", width=3, command=lambda: Apel.update_amount(1))
     plus_Apel.place(relx=0.5, rely=0.329)
@@ -149,9 +149,9 @@ def Augļi_page():
 
     #PRODUKTS 7
 
-    k7 = tk.Label(logs, image=kon7)
-    k7.place(relx=0.02, rely=0.39)
-    Zemen = kon7
+    image_label = tk.Label(logs, image=k7)
+    image_label.place(relx=0.02, rely=0.39)
+    Zemen = k7
 
     cena_Zemen = 1.20
     cena_text_Zemen = tk.Label(text=f"Cena: €{cena_Zemen:.2f}", font=("Arial", 12))
@@ -167,11 +167,11 @@ def Augļi_page():
 
     #PRODUKTS 8
 
-    k8 = tk.Label(logs, image=kon8)
-    k8.place(relx=0.23, rely=0.39)
-    Melle = kon8
+    image_label = tk.Label(logs, image=k8)
+    image_label.place(relx=0.23, rely=0.39)
+    Melle = k8
 
-    cena_Melle = 0.25
+    cena_Melle = 1.25
     cena_text_Melle = tk.Label(text=f"Cena: €{cena_Melle:.2f}", font=("Arial", 12))
     cena_text_Melle.place(relx=0.345, rely=0.52)
     daudzums_Melle = tk.Label(text="0", font=("Arial", 12))
